@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>LOGIN FORM</title>
+	<link rel="stylesheet" type="text/css" href="constyle.css">
+</head>
+<body>
+	<div class="box">
+		<form method="post" id="form">
+			<h2>CONTACT FORM</h2>
+			<div class="inputbox">
+				<input type="text" required="required" name="name">
+				<span>Name</span>
+				<i></i>
+			</div>
+			
+			<div class="inputbox">
+				<input type="email" required="required" name="email">
+				<span>Email</span>
+				<i></i>
+			</div>
+
+			<div class="inputbox">
+				<input type="number" required="required" name="number">
+				<span>Phone number</span>
+				<i></i>
+			</div>
+			
+
+			
+			
+			<center><input type="submit" value="submit"  name="btn"></center>
+		</form>
+		
+	</div>
+	<script>
+		let url='https://script.google.com/macros/s/AKfycbwI7eRkTX95ND7jXwibYFPaUgWsFGc_dtmqhEyEmgTHYDChdDE8hJA-ABBt-Rt5HQvs/exec';
+		let form= document.querySelector('#form');
+		form.addEventListener("submit",(e)=>{
+			e.target.btn.innerHTML="Submitting";
+			let d= new FormData(form);
+			fetch(url,{
+				method:"POST",
+				body:d
+			}).then((res)=>res.text())
+			.then((finalRes)=>{
+				e.target.btn.innerHTML="Submit"
+				console.log(finalRes)
+			})
+			e.preventDefault();
+
+
+		})
+	</script>
+
+</body>
+</html>

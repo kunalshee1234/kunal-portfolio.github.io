@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PERSONAL PORTFOLIO</title>
+	<link rel="stylesheet" type="text/css" href="portstyle.css">
+</head>
+<body>
+	<div id="header">
+		<div class="container">
+			<nav>
+				<img src="images/logo.png" class="log">
+				<ul>
+					<li><a href="#header" >HOME</a></li>
+					<li><a href="#about">ABOUT</a></li>
+					<li><a href="#services">SERVICES</a></li>
+					<li><a href="conform.html">CONTACT</a></li>
+
+				</ul>
+			</nav>
+			<div class="header-text">
+				<p>WEB DEVELOPER</p>
+				<h1>Hi,I'm <span>Kunal Singh</span> <br>From India</h1>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+	<!-----------------------------------about section-------------------------------------------------------------->
+
+	<div id="about">
+		<div class="container">
+			<div class="row">
+			<div class="about-call-1">
+				<img src="images/aboutphoto.png">
+			</div>
+			<div class="about-call-2">
+				<h1 class="sub-title">ABOUT ME</h1>
+				<br>
+				<p class="cs">
+					I am kunal singh.I live in delhi and i am doing bca from  ignou and software enginerring course from iics india.
+					And i know about the wordpress and i learn about cpp.I have a cerificate of excel python & html,css project.
+				</p >
+				<br>
+				<div class="tab-titles">
+					<p class="tab-links active-link" onclick="opentab('skills') ">SKILLS</p>
+					<p class="tab-links" onclick="opentab('education')">EDUCATION</p>
+				</div>
+				<br>
+				<div class="tab-contents active-tab" id="skills">
+					<ul>
+						<li><span>WORDPRESS</span><br>DESIGNING WEBSITE FOR WORDPRESS</li>
+						<li><span>WEB DEVELOPER</span><br>DESIGNING WEBSITE WITH THE HTML, CSS, JAVASCRIPT</li>
+					</ul>
+					
+				</div>
+				<div class="tab-contents" id="education">
+					<ul>
+						<li><span>BCA</span><br>BCA FROM IGNOU</li>
+						<li><span>SOFTWARE ENGINEERING 	 </span><br>SOFTWARE ENGINEERING FROM IICS INDIA</li>
+					</ul>
+					
+				</div>
+			</div> 
+		</div>
+	</div>
+		
+</div>
+<br>
+<br>
+<!-----------------------------------------------services section------------------------------------------->
+<div id="services">
+	<div class="container">
+		<h1 class="sub-title"><center>MY SERVICES</center></h1>
+		<div class="services-list">
+			<div>
+				<h2>WEB DESIGN</h2>
+				<p>we make website mobile friendly and easily accessible </p>
+				<a href="#">Learn more</a>
+				
+			</div>
+			<div>
+				<h2>DATA STRUCTURE</h2>
+				<p>I know about some concept of data structure and algorithm </p>
+				<a href="#">Learn more</a>
+				
+			</div>
+			<div>
+				<h2>CPP</h2>
+				<p>I know about cpp language</p>
+				<a href="#">Learn more</a>
+				
+			</div>
+			
+		</div>
+	</div>
+	
+</div>
+<!----------------------------------future studies----------------------------------------------->
+<div id="services">
+	<div class="container">
+		<h1 class="sub-title"><center>FUTURE STUDIES</center></h1>
+		<div class="services-list">
+			<div>
+				<h2>ASSEMBLY LANGUAGES</h2>
+				<p> In future i will learn about assembly language </p>
+				
+				
+			</div>
+			<div>
+				<h2>JAVA LANKGUAGE</h2>
+				<p>In future i will learn about assembly language </p>
+				
+				
+			</div>
+			
+			
+		</div>
+	</div>
+	
+</div>
+
+<script>
+
+	var tablinks= document.getElementsByClassName("tab-links");
+	var tabcontents= document.getElementsByClassName("tab-contents");
+
+	function opentab(tabname){
+		for(tablink of tablinks){
+			tablink.classList.remove("active-link");
+		}
+		for(tabcontent of tabcontents){
+			tabcontent.classList.remove("active-tab");
+		}
+		event.currentTarget.classList.add("active-link");
+		document.getElementById(tabname).classList.add("active-tab");
+
+	}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
